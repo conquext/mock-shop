@@ -50,6 +50,8 @@ Mock Shop is a simple shopping server.
 * Clone the repository \$ git clone https://github.com/conquext/mock-shop.git
 * Install npm dependencies by running npm install
 
+* Then set the env environment variable according to the .env.sample attached
+
 ## Stand out
 
 1. Thorough Swagger Documentation.
