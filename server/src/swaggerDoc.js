@@ -1,5 +1,5 @@
 import swaggerJsdoc from "swagger-jsdoc";
-import keys from "./src/config/keys";
+// import keys from "./config/keys";
 
 const swaggerDefinition = {
   info: {
@@ -49,7 +49,12 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
-  apis: ["./src/routes/api/*.js", "./src/models/*.js"]
+  apis: [
+    "./src/routes/api/*.js",
+    "./src/models/*.js",
+    "./routes/api/*.js",
+    "./models/*.js"
+  ]
 };
 
 const specs = swaggerJsdoc(options);

@@ -7,7 +7,7 @@ import cors from "cors";
 import swaggerUi from "swagger-ui-express";
 import Log from "debug";
 import routes from "./routes";
-import specs from "../swaggerDoc";
+import specs from "./swaggerDoc";
 import Response from "./utils/response";
 import passportSetup from "./services/passport";
 import stringParser from "./middlewares/stringParser";

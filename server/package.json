@@ -1,11 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mock Shop is a simple shopping server.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf ./dist && mkdir dist",
+    "clean": "rm -rf ./build && mkdir build",
     "build": "npm run clean && babel ../server/src --out-dir build",
     "start": "npm run build && node ./build/index.js",
     "heroku-postbuild": "npm run build && npm run undo:prod && npm run migrate:prod",
@@ -25,6 +25,7 @@
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
     "axios": "^0.19.2",
     "bcrypt": "^3.0.8",
     "body-parser": "^1.19.0",

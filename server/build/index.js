@@ -25,7 +25,7 @@ var _debug = _interopRequireDefault(require("debug"));
 
 var _routes = _interopRequireDefault(require("./routes"));
 
-var _swaggerDoc = _interopRequireDefault(require("../swaggerDoc"));
+var _swaggerDoc = _interopRequireDefault(require("./swaggerDoc"));
 
 var _response = _interopRequireDefault(require("./utils/response"));
 
