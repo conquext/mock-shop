@@ -57,6 +57,12 @@ export default class Validation {
     return Validation.isValidSentence && pdesc.length > 5;
   }
 
+  static isValidRole(role) {
+    const validRole = ["user", "admin"];
+    if (validRole.includes(role.toLowerCase())) return true;
+    return false;
+  }
+
   static validateSignup(userData) {
     const errors = {};
 
@@ -83,6 +89,10 @@ export default class Validation {
       errors.email = "Email is required";
     } else if (!Validation.isValidEmail(userData.email)) {
       errors.email = "Email is invalid";
+    }
+
+    if (userData.role && !Validation.isValidRole(userData.role)) {
+      errors.role = "Role is invalid. Leave blank to default to user.";
     }
 
     if (!userData.password) {
