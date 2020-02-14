@@ -164,7 +164,7 @@ router.get("/google/callback", passport.authenticate("google"), googleLogin);
 /**
  * @swagger
  * /auth/current_user:
- *   post:
+ *   get:
  *     tags:
  *       - Auth
  *     name: current_user

@@ -69,6 +69,7 @@ Mock Shop is a simple shopping server.
 | POST   |         `/api/v1/auth/google`         |                                     Sign in with google |    Public / All |
 | POST   |         `/api/v1/auth/forgot`         |                     Generate a new password reset token |    Public / All |
 | POST   |         `/api/v1/auth/reset`          |                                     Reset user password |    Public / All |
+| GET    |      `/api/v1/auth/current_user`      |              Returns current user from token in headers |  Private / User |
 | POST   |          `/api/v1/products`           |                            Create a new product listing | Private / Admin |
 | GET    |          `/api/v1/products`           |                             Return all product listings |   Private / All |
 | GET    |     `/api/v1/products/:productId`     |                               Return a specific product |   Private / All |
