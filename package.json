@@ -4,7 +4,7 @@
   "description": "Mock Shop is a simple shopping server.",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=production && node server/build/index.js",
+    "start": "cd server && npm start",
     "heroku-postbuild": "cd server && npm install && npm run heroku-postbuild",
     "dev": "npm run start:dev --prefix server"
   },
