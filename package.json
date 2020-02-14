@@ -4,12 +4,16 @@
   "description": "Mock Shop is a simple shopping server.",
   "main": "index.js",
   "scripts": {
-    "start": "node server/build/index.js",
+    "start": "set NODE_ENV=production && node server/build/index.js",
     "heroku-postbuild": "cd server && npm install && npm run heroku-postbuild",
     "dev": "npm run start:dev --prefix server"
   },
   "keywords": [],
   "author": "Rasheed",
   "license": "ISC",
-  "proxy": "http://localhost:2003"
+  "proxy": "http://localhost:2003",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "dotenv": "^8.2.0"
+  }
 }

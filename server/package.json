@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf ./build && mkdir build",
-    "build": "npm run clean && babel ../server/src --out-dir build",
+    "build": "cross-env npm run clean && babel ../server/src --out-dir build",
     "start": "node ./build/index.js",
-    "heroku-postbuild": "npm run undo:prod && npm run migrate:prod",
+    "heroku-postbuild": "npm run build",
     "start:dev": "nodemon --exec babel-node -- src/index.js",
     "migrate:dev": "sequelize db:migrate",
     "migrate:test": "cross-env NODE_ENV=test sequelize db:migrate",
